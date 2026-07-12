@@ -1,0 +1,135 @@
+# AINora — WordPress Theme
+
+ธีม WordPress สำหรับแพลตฟอร์มเรียนรู้มรดกวัฒนธรรมมโนราห์ **ainora.psu.ac.th** — ออกแบบให้สอดคล้องกับดีไซน์ของเว็บ AINORA (ฟอนต์ Noto Sans Thai, โทน **ทองมรดก #D4AF37** บนพื้นขาว–เทาอ่อน) พร้อม integration สำหรับ **Tutor LMS** (archive, course loop, dashboard styling, หน้า home ที่ดึงข้อมูลคอร์ส/ผู้สอน) พัฒนาด้วย **TailwindCSS** + **Alpine.js**
+
+A classic WordPress theme for the AINORA Manorah cultural-heritage learning platform, with Tutor LMS-aware archive, course loop, and dashboard integration, built with TailwindCSS and Alpine.js.
+
+---
+
+## ความต้องการระบบ (Requirements)
+
+- WordPress ≥ 6.4, PHP ≥ 7.4
+- ปลั๊กอิน **Tutor LMS** (สำหรับคอร์ส/บทเรียน/แบบทดสอบ/ใบเกียรติบัตร) — ธีมทำงานได้แม้ไม่มี แต่ส่วนที่เป็น LMS จะถูกซ่อน และบางหน้า/การ์ดจะ fallback เป็น WordPress ปกติ
+- Node.js ≥ 18 + npm (สำหรับ build CSS/JS)
+
+## การติดตั้ง (Install)
+
+```bash
+# 1) ติดตั้ง dependencies
+npm install
+
+# 2) build assets (production)
+npm run build
+
+# 3) นำทั้งโฟลเดอร์ไปวางที่ wp-content/themes/nora-learn แล้ว Activate ในแอดมิน
+```
+
+เมื่อ Activate ธีมจะสร้างหน้า **เกี่ยวกับเรา / ติดต่อ / FAQ / ผู้สอน / สถิติ** ให้อัตโนมัติ (ผูกกับ page template ที่ถูกต้องแล้ว) — เพียงสร้างเมนู `Primary` แล้วเลือกหน้าเหล่านี้
+
+## การพัฒนา (Development)
+
+```bash
+npm run dev      # watch — คอมไพล์ CSS + JS อัตโนมัติเมื่อแก้ไฟล์
+npm run build    # production — minify CSS + JS
+```
+
+- แก้สไตล์ที่ [src/css/main.css](src/css/main.css) — **อย่าแก้** `assets/css/main.css` (เป็นไฟล์ที่ build แล้ว)
+- แก้ JS ที่ [src/js/main.js](src/js/main.js)
+- สี/ฟอนต์/spacing ทั้งหมดอยู่ที่ [tailwind.config.js](tailwind.config.js) (single source of truth)
+
+> Tailwind สแกนคลาสจากไฟล์ `**/*.php` ทั้งหมด ถ้าเพิ่มคลาสใหม่ในเทมเพลตต้องรัน build ใหม่
+
+## เว็บฟอนต์ (Self-hosted fonts)
+
+ฟอนต์หลักของ UI และหัวข้อคือ **Noto Sans Thai** — typeface เดียวกับที่ใช้บน **ainora.psu.ac.th** เสิร์ฟจาก `assets/fonts/` เอง (น้ำหนัก 300–700, subset ไทย+ละติน) **ไม่พึ่ง Google Fonts CDN** โหลดเร็วขึ้นและไม่เรียกข้ามโดเมน (เหมาะกับ PDPA) `@font-face` (พร้อม `font-display: swap`) ฝังอยู่ต้นไฟล์ [src/css/main.css](src/css/main.css) และฟอนต์ไทยหลักถูก `preload` ใน [inc/enqueue.php](inc/enqueue.php)
+
+**Sarabun** ยังเสิร์ฟจาก `assets/fonts/` เองเป็นฟอนต์สำรอง (fallback) สำหรับเนื้อหา
+
+> วิธีอัปเดต/เพิ่มน้ำหนัก Noto Sans Thai: `npm pack @fontsource/noto-sans-thai` แล้วก๊อปไฟล์ใน `files/` (`noto-sans-thai-{thai|latin}-{weight}-normal.woff2`) มาไว้ที่ `assets/fonts/` ในชื่อ `notosansthai-{weight}-{subset}.woff2` เพิ่มบล็อก `@font-face` ใน `src/css/main.css` แล้ว `npm run build`
+
+> Design tokens (สี/เงา/ฟอนต์) ดึงค่ามาจาก ainora.psu.ac.th โดยตรง: ทองมรดก `#d4af37` (hover `#b5952f`, ไฮไลต์ `#f9e076`), หมึกเข้ม `#111827`, พื้นขาว/เทาอ่อน `#f9fafb`, เส้นขอบ `#e5e7eb`, ข้อความรอง `#6b7280`, การ์ดมุมโค้ง 16px เงานุ่ม, ปุ่ม/ชิปทรง pill — แก้ที่ [tailwind.config.js](tailwind.config.js) + [theme.json](theme.json) แล้ว `npm run build`
+
+## อัปเดตธีมอัตโนมัติ (Auto-update จาก GitHub)
+
+ธีมเช็คอัปเดตจาก **GitHub Releases** ของ repo นี้โดยตรง (ผ่าน Plugin Update Checker ที่ฝังใน [inc/lib/plugin-update-checker/](inc/lib/plugin-update-checker/) + bootstrap ที่ [inc/updater.php](inc/updater.php)) — เมื่อมี release ใหม่ที่เวอร์ชันสูงกว่า จะขึ้นปุ่มอัปเดตใน **แดชบอร์ด → อัปเดต** และ **ธีม** กดอัปเดตได้ในคลิกเดียว (repo เป็น public จึงไม่ต้องใช้ token)
+
+### ปล่อยเวอร์ชันใหม่ — บนเครื่อง dev "แก้โค้ดแล้ว push" พอ
+
+```bash
+git push origin main
+```
+
+GitHub Action [.github/workflows/release.yml](.github/workflows/release.yml) จะทำให้อัตโนมัติทุกครั้งที่ push เข้า `main`:
+
+1. คำนวณเวอร์ชันถัดไป — **patch +1** จาก tag ล่าสุด (เช่น `v1.0.3` → `v1.0.4`)
+2. `npm ci && npm run build` (build CSS/JS สดในคลาวด์ — ไม่ต้อง build ในเครื่อง)
+3. แพ็ก `nora-learn.zip` (โครงสร้างถูกต้อง รวม assets/fonts/PUC; ตัด node_modules/src/configs)
+4. สร้าง tag + **GitHub Release** แนบ zip → ทุกไซต์ที่ใช้ธีมเห็นปุ่มอัปเดตภายใน ~12 ชม. (หรือกด “Check again”)
+
+> - อยาก bump **minor/major**: แก้ `Version:` ใน [style.css](style.css) ให้สูงกว่า tag ล่าสุด (เช่น `1.1.0`) แล้ว push — Action จะใช้เวอร์ชันนั้นเป็น release และ patch ต่อจากนั้นไปเอง
+> - ไม่อยากให้ push ครั้งนั้นออก release: ใส่ `[skip release]` ใน commit message
+> - push ที่แตะแค่ `**.md`, `docs/**`, `.github/**` จะไม่ทริก release
+
+## โครงสร้าง (Structure)
+
+```
+inc/            setup, enqueue, template-tags, widgets, customizer, tutor
+template-parts/ header/ footer/ home/ cards/  (ชิ้นส่วนใช้ซ้ำ)
+page-templates/ about, contact, faq, instructors, statistics, tutorial, auth
+tutor/          override templates ของ Tutor LMS (ดู tutor/README.md)
+src/            ซอร์ส CSS/JS (ก่อน build)
+assets/         CSS/JS ที่ build แล้ว
+```
+
+## การปรับแต่งเนื้อหา (Customizing)
+
+- **Appearance → Customize → ตั้งค่า Nora Learn**: Hero, เนื้อหาหน้าแรก, หน้าเข้าสู่ระบบ (Auth), ข้อมูลติดต่อ, โซเชียล, แถบ CTA, ส่วนท้าย
+- **เมนู**: `Primary`, `Footer`, `Footer legal`, `Social`
+- **โลโก้**: Customize → Site Identity → Logo
+- **หน้าแรก**: ตั้ง Settings → Reading → "หน้าแรกแบบคงที่" (front-page.php ทำงานอัตโนมัติ); หน้า Posts สำหรับข่าวจะใช้ home.php
+- **คอร์ส/ผู้สอน/เกียรติบัตร**: จัดการผ่าน Tutor LMS — ธีมมี archive override, course card override, dashboard styling และ helper data พร้อมใช้งาน (ดู `tutor/README.md`)
+- **FAQ / Partners**: ปรับผ่าน filter `nora_learn_faq_items`, `nora_learn_partner_logos`
+
+## หน้าเข้าสู่ระบบ (Auth page)
+
+ธีมมีเทมเพลต **“เข้าสู่ระบบ / สมัครเรียน (Auth)”** ([page-templates/template-auth.php](page-templates/template-auth.php)) ที่ให้ฟอร์มเข้าสู่ระบบ/สมัครเรียนในตัว (รองรับ WordPress login + Tutor LMS registration) — ใช้งานได้ทันทีโดยไม่ต้องตั้งค่าอะไร
+
+ถ้าใช้ **ปลั๊กอิน auth ที่ให้มาเป็น shortcode** (เช่น `[plugin_login]`) สามารถเสียบเข้ามาแทนฟอร์มในตัวได้ โดย**ไม่ต้องแก้ไฟล์ธีม**:
+
+1. **Appearance → Customize → ตั้งค่า Nora Learn → หน้าเข้าสู่ระบบ (Auth)** → ใส่ shortcode ในช่อง **Auth shortcode**
+2. สร้าง Page (เช่นชื่อ `Login`, slug `auth`) แล้วเลือก **Template: เข้าสู่ระบบ / สมัครเรียน (Auth)**
+
+shortcode ถูกเก็บใน **ฐานข้อมูล** (theme mod) ไม่ใช่ในไฟล์ธีม จึง **ไม่หายเมื่ออัปเดตธีมจาก GitHub Release** และยังได้ layout/CSS/JS/เมนูจากธีมเวอร์ชันล่าสุดตามปกติ เว้นช่องนี้ว่างไว้เพื่อกลับไปใช้ฟอร์มในตัวของธีม
+
+> ผู้ดูแลที่อยากวาง shortcode เองในเนื้อหาเพจก็ยังทำได้ตามปกติ — ธีมไม่ยุ่งเกี่ยว
+
+### ⚠️ อย่าแก้ parent theme โดยตรง
+
+ทุกครั้งที่ธีมอัปเดตจาก GitHub Release ไฟล์ในธีมจะถูกเขียนทับ การแก้ไฟล์ parent theme โดยตรงจะ**หายทั้งหมด** ให้ปรับแต่งผ่านช่องทางที่ปลอดภัยแทน:
+
+- **ผู้ใช้ทั่วไป** → ตั้งค่าใน Customizer (ค่าอยู่ในฐานข้อมูล)
+- **Developer** → ใช้ filter/hook ใน **child theme** หรือปลั๊กอินเสริม:
+
+```php
+// เปลี่ยน/บังคับ shortcode ที่จะแสดงในหน้า Auth
+add_filter( 'nora_learn_auth_shortcode', function ( $shortcode ) {
+    return '[my_custom_auth_form]';
+} );
+
+// แทรกเนื้อหาก่อน/หลังฟอร์ม auth
+add_action( 'nora_learn_before_auth_shortcode', function () { /* ... */ } );
+add_action( 'nora_learn_after_auth_shortcode',  function () { /* ... */ } );
+```
+
+## i18n
+
+สตริงทั้งหมดอยู่ใน text domain `nora-learn` สร้างไฟล์แปลด้วย:
+
+```bash
+wp i18n make-pot . languages/nora-learn.pot --domain=nora-learn
+```
+
+## หมายเหตุ
+
+- ต้องเพิ่ม `screenshot.png` (1200×900) เองสำหรับภาพ preview ในหน้า Themes
+- ธีมนี้เป็น classic theme; theme.json ใช้กำหนด palette/ฟอนต์ให้ block editor กลมกลืนเท่านั้น

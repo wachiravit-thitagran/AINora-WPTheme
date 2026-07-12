@@ -1,0 +1,71 @@
+<?php
+/**
+ * Homepage hero. Content driven by the Customizer (Nora Learn → Hero).
+ *
+ * @package Nora_Learn
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+$title    = nora_learn_option( 'nora_hero_title', __( 'เรียนรู้ มรดกมโนราห์<br>ในยุค ดิจิทัล', 'nora-learn' ) );
+$subtitle = nora_learn_option( 'nora_hero_subtitle', __( 'คอร์สเรียนออนไลน์ บทเรียน และคลังความรู้ เพื่อการเรียนรู้ตลอดชีวิตอย่างเป็นอิสระ', 'nora-learn' ) );
+$cta_text = nora_learn_option( 'nora_hero_cta_text', __( 'เริ่มเรียนรู้', 'nora-learn' ) );
+$cta_url  = nora_learn_option( 'nora_hero_cta_url' ) ?: nora_learn_courses_url();
+
+$stats = nora_learn_get_stats();
+?>
+<section class="relative overflow-hidden bg-white">
+	<!-- atmosphere (kept subtle — warm gold glow, like ainora.psu.ac.th) -->
+	<div class="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-gold/15 blur-3xl" aria-hidden="true"></div>
+
+	<div class="container-nora relative grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
+		<!-- copy -->
+		<div class="max-w-xl animate-fade-up">
+			<h1 class="font-serif text-4xl font-bold leading-[1.15] text-ink drop-shadow-sm sm:text-5xl lg:text-[3.25rem]">
+				<?php echo wp_kses_post( $title ); ?>
+			</h1>
+
+			<p class="mt-6 text-lg leading-relaxed text-ink-light"><?php echo wp_kses_post( $subtitle ); ?></p>
+
+			<!-- Course search — the primary "find a course" entry point -->
+			<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>"
+				class="mt-8 flex max-w-xl items-center gap-2 rounded-full border border-paper-200 bg-white p-1.5 shadow-card focus-within:ring-2 focus-within:ring-gold">
+				<input type="hidden" name="post_type" value="courses" />
+				<span class="grid h-9 w-9 shrink-0 place-items-center text-ink-light"><?php echo nora_learn_icon( 'search', 'h-5 w-5' ); // phpcs:ignore ?></span>
+				<label for="nora-hero-search" class="sr-only"><?php esc_html_e( 'ค้นหาคอร์ส', 'nora-learn' ); ?></label>
+				<input id="nora-hero-search" type="search" name="s" required
+					placeholder="<?php esc_attr_e( 'ค้นหาคอร์ส หัวข้อ หรือผู้สอน…', 'nora-learn' ); ?>"
+					class="min-w-0 flex-1 border-0 bg-transparent text-ink placeholder:text-ink-light focus:ring-0" />
+				<button type="submit" class="btn-primary shrink-0 rounded-full"><?php esc_html_e( 'ค้นหา', 'nora-learn' ); ?></button>
+			</form>
+
+			<div class="mt-6 flex flex-wrap items-center gap-4">
+				<a href="<?php echo esc_url( $cta_url ); ?>" class="btn-gold btn-lg">
+					<?php echo esc_html( $cta_text ); ?>
+					<?php echo nora_learn_icon( 'arrow', 'h-5 w-5' ); // phpcs:ignore ?>
+				</a>
+			</div>
+		</div>
+
+		<!-- stat cards -->
+		<div class="hidden flex-col gap-4 lg:flex">
+			<div class="rounded-2xl border border-paper-200 bg-white px-8 py-6 shadow-soft">
+				<p class="font-serif text-4xl font-bold text-ink"><?php echo number_format_i18n( $stats['courses'] ); ?>+</p>
+				<p class="mt-1 text-base text-ink-light"><?php esc_html_e( 'คอร์สเรียน', 'nora-learn' ); ?></p>
+			</div>
+			<div class="rounded-2xl border border-paper-200 bg-white px-8 py-6 shadow-soft">
+				<p class="font-serif text-4xl font-bold text-ink"><?php echo number_format_i18n( $stats['students'] ); ?>+</p>
+				<p class="mt-1 text-base text-ink-light"><?php esc_html_e( 'ผู้เรียน', 'nora-learn' ); ?></p>
+			</div>
+			<div class="rounded-2xl border border-paper-200 bg-white px-8 py-6 shadow-soft">
+				<p class="font-serif text-4xl font-bold text-gold"><?php esc_html_e( 'FREE', 'nora-learn' ); ?></p>
+				<p class="mt-1 text-base text-ink-light"><?php esc_html_e( 'เข้าถึงได้ฟรี', 'nora-learn' ); ?></p>
+			</div>
+		</div>
+	</div>
+
+	<!-- wave divider -->
+	<div class="relative -mb-px text-paper-50" aria-hidden="true">
+		<svg viewBox="0 0 1440 80" fill="currentColor" preserveAspectRatio="none" class="h-12 w-full sm:h-16"><path d="M0 80h1440V0c-240 53-480 53-720 27S240-13 0 27z"/></svg>
+	</div>
+</section>

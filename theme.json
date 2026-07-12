@@ -1,0 +1,74 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "768px",
+			"wideSize": "1200px"
+		},
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{ "slug": "gold", "color": "#d4af37", "name": "ทองมโนราห์ (Gold)" },
+				{ "slug": "gold-dark", "color": "#b5952f", "name": "ทองเข้ม (Gold dark)" },
+				{ "slug": "gold-light", "color": "#f9e076", "name": "ทองอ่อน (Gold light)" },
+				{ "slug": "night", "color": "#111827", "name": "กลางคืน (Night)" },
+				{ "slug": "paper", "color": "#f3f4f6", "name": "พื้นเทา (Paper)" },
+				{ "slug": "paper-light", "color": "#f9fafb", "name": "พื้นอ่อน (Paper light)" },
+				{ "slug": "ink", "color": "#111827", "name": "หมึก (Ink)" },
+				{ "slug": "success", "color": "#28c76f", "name": "สำเร็จ (Success)" },
+				{ "slug": "warning", "color": "#ff9f43", "name": "เตือน (Warning)" },
+				{ "slug": "danger", "color": "#ff4c51", "name": "อันตราย (Danger)" },
+				{ "slug": "info", "color": "#00bad1", "name": "ข้อมูล (Info)" },
+				{ "slug": "white", "color": "#ffffff", "name": "ขาว (White)" }
+			]
+		},
+		"typography": {
+			"fluid": true,
+			"fontFamilies": [
+				{
+					"fontFamily": "'Noto Sans Thai', Sarabun, system-ui, sans-serif",
+					"slug": "sans",
+					"name": "Noto Sans Thai (เนื้อหา)"
+				},
+				{
+					"fontFamily": "'Noto Sans Thai', Sarabun, system-ui, sans-serif",
+					"slug": "serif",
+					"name": "Noto Sans Thai (หัวข้อ)"
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "size": "0.875rem", "name": "เล็ก" },
+				{ "slug": "medium", "size": "1.0625rem", "name": "ปกติ" },
+				{ "slug": "large", "size": "1.375rem", "name": "ใหญ่" },
+				{ "slug": "x-large", "size": "2rem", "name": "ใหญ่มาก" },
+				{ "slug": "xx-large", "size": "2.75rem", "name": "พาดหัว" }
+			]
+		},
+		"spacing": {
+			"units": [ "px", "em", "rem", "%", "vw", "vh" ]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "#ffffff",
+			"text": "#111827"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--sans)",
+			"fontSize": "1.0625rem",
+			"lineHeight": "1.7"
+		},
+		"elements": {
+			"link": {
+				"color": { "text": "#b5952f" }
+			},
+			"h1": { "typography": { "fontFamily": "var(--wp--preset--font-family--serif)" } },
+			"h2": { "typography": { "fontFamily": "var(--wp--preset--font-family--serif)" } },
+			"h3": { "typography": { "fontFamily": "var(--wp--preset--font-family--serif)" } },
+			"h4": { "typography": { "fontFamily": "var(--wp--preset--font-family--serif)" } }
+		}
+	}
+}

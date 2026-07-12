@@ -1,0 +1,19 @@
+/*
+Theme Name: AINora
+Theme URI: https://ainora.psu.ac.th
+Update URI: https://github.com/wachiravit-thitagran/AINora-WPTheme
+Author: Digital Innovation and Intelligent Systems / Prince of Songkla University
+Author URI: https://ainora.psu.ac.th
+Description: ธีมแพลตฟอร์มเรียนรู้มรดกวัฒนธรรมมโนราห์ ออกแบบให้สอดคล้องกับ ainora.psu.ac.th (ฟอนต์ Noto Sans Thai, โทนทองมรดก #D4AF37 บนพื้นขาว–เทาอ่อน) รองรับ Tutor LMS เต็มรูปแบบ พัฒนาด้วย TailwindCSS. A Manorah cultural-heritage learning-platform theme, design-aligned with ainora.psu.ac.th, with full Tutor LMS integration, built with TailwindCSS.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nora-learn
+Tags: education, lms, tutor-lms, custom-menu, featured-images, translation-ready, threaded-comments, two-columns, right-sidebar
+
+This theme's styles are compiled by TailwindCSS into assets/css/main.css.
+Do not edit assets/css/main.css directly — edit src/css/main.css and run `npm run build`.
+*/
