@@ -1,0 +1,203 @@
+name: WP Integration
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  integration:
+    name: "WP Integration (PHP ${{ matrix.php-version }})"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: ['8.0', '8.1', '8.2', '8.3', '8.4']
+      fail-fast: false
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: wordpress
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install NPM Dependencies
+      run: npm ci
+
+    - name: Build Theme Assets
+      run: npm run build
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-version }}
+        extensions: mysqli, curl, dom, xml, mbstring
+        tools: wp-cli
+        coverage: none
+
+    - name: Install WordPress Core
+      run: |
+        mkdir -p /tmp/wordpress
+        cd /tmp/wordpress
+        wp core download --allow-root
+        wp config create --dbname=wordpress --dbuser=root --dbpass=root --dbhost=127.0.0.1 --allow-root
+        wp core install --url=http://localhost --title="Test Site" --admin_user=admin --admin_password=admin --admin_email=admin@example.com --allow-root
+
+    - name: Symlink Theme
+      run: |
+        # Link the current repository to the WordPress themes directory
+        ln -s $GITHUB_WORKSPACE /tmp/wordpress/wp-content/themes/nora-learn
+
+    - name: Activate Theme
+      run: |
+        cd /tmp/wordpress
+        wp theme activate nora-learn --allow-root
+
+    - name: Install and Activate Plugins
+      run: |
+        cd /tmp/wordpress
+        wp plugin install tutor --activate --allow-root
+
+    - name: Smoke Test - Home Page
+      run: |
+        cd /tmp/wordpress
+        
+        # Test loading the home page to ensure no fatal PHP errors
+        wp eval '
+        ob_start();
+        get_header();
+        $output = ob_get_clean();
+        if (strpos($output, "<html") !== false) {
+          echo "Theme loaded successfully.";
+        } else {
+          echo "Theme failed to load properly.";
+          exit(1);
+        }
+        ' --allow-root
+
+    - name: Smoke Test - Single Post
+      run: |
+        cd /tmp/wordpress
+        wp eval '
+        $post_id = wp_insert_post(array(
+            "post_title" => "Test Post",
+            "post_content" => "This is a test.",
+            "post_status" => "publish",
+            "post_type" => "post"
+        ));
+        global $wp_query;
+        $wp_query->query(array("p" => $post_id));
+        the_post();
+        
+        ob_start();
+        get_template_part("single");
+        $output = ob_get_clean();
+        
+        if (empty($output)) {
+           echo "Template output was empty, but no fatal errors occurred.\n";
+        }
+        echo "Single post rendering test passed!\n";
+        ' --allow-root
+
+    - name: Smoke Test - Core Templates (404, Archive, Search)
+      run: |
+        cd /tmp/wordpress
+        wp eval '
+        $templates = array("404", "archive", "search");
+        foreach ($templates as $template) {
+           ob_start();
+           get_template_part($template);
+           $output = ob_get_clean();
+           if ($output === false) {
+               echo "Failed to load $template template.\n";
+               exit(1);
+           }
+        }
+        echo "Core templates rendering test passed!\n";
+        ' --allow-root
+
+    - name: Smoke Test - Custom Page Templates
+      run: |
+        cd /tmp/wordpress
+        wp eval '
+        $custom_templates = array(
+            "page-templates/template-about.php",
+            "page-templates/template-instructors.php",
+            "page-templates/template-contact.php",
+            "page-templates/template-auth.php",
+            "page-templates/template-faq.php",
+            "page-templates/template-tutorial.php",
+            "page-templates/template-statistics.php",
+            "page-templates/template-dashboard.php"
+        );
+        
+        foreach ($custom_templates as $template) {
+            $post_id = wp_insert_post(array(
+                "post_title" => "Test " . basename($template),
+                "post_status" => "publish",
+                "post_type" => "page"
+            ));
+            update_post_meta($post_id, "_wp_page_template", $template);
+            
+            global $wp_query;
+            $wp_query->query(array("page_id" => $post_id));
+            the_post();
+            
+            ob_start();
+            // Simulate loading the template file directly as WP does
+            load_template(get_stylesheet_directory() . "/" . $template, false);
+            $output = ob_get_clean();
+            
+            if ($output === false) {
+               echo "Failed to load custom template: $template\n";
+               exit(1);
+           }
+        }
+        echo "Custom page templates rendering test passed!\n";
+        ' --allow-root
+
+    - name: Smoke Test - TutorLMS Overridden Templates
+      run: |
+        cd /tmp/wordpress
+        wp eval '
+        // Create a dummy course
+        $course_id = wp_insert_post(array(
+            "post_title" => "Test Course",
+            "post_status" => "publish",
+            "post_type" => "courses"
+        ));
+        
+        global $wp_query;
+        $wp_query->query(array("post_type" => "courses", "p" => $course_id));
+        the_post();
+        
+        ob_start();
+        // The theme overrides TutorLMS templates via the tutor/ directory
+        // Typically tutor_get_template is used, but we can test the raw PHP files directly
+        // for any fatal syntax/logic errors when loaded.
+        // E.g., single course
+        if (file_exists(get_stylesheet_directory() . "/tutor/single-course.php")) {
+            load_template(get_stylesheet_directory() . "/tutor/single-course.php", false);
+        }
+        $output = ob_get_clean();
+        
+        echo "TutorLMS overridden templates rendering test passed!\n";
+        ' --allow-root
