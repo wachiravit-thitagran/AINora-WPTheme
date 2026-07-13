@@ -1,23 +1,1302 @@
-# Copyright (C) 2026 Buddhadasa Indapanno Archives / Prince of Songkla University
+# Copyright (C) 2026 Digital Innovation and Intelligent Systems / Prince of Songkla University
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Nora Learn 1.0.0\n"
-"Report-Msgid-Bugs-To: https://nora-learn.psu.ac.th\n"
-"Last-Translator: \n"
-"Language-Team: Thai\n"
-"Language: th\n"
+"Project-Id-Version: AINora 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/wachiravit-thitagran/AINora-WPTheme/issues\n"
+"POT-Creation-Date: 2026-07-12T20:24:44+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-29\n"
 "X-Domain: nora-learn\n"
-"X-Generator: Manual stub — regenerate with `wp i18n make-pot . languages/nora-learn.pot`\n"
 
-# This is a starter POT file. The theme's UI strings are already wrapped in the
-# `nora-learn` text domain throughout the PHP templates. To extract them all,
-# run from the theme root:
-#
-#   wp i18n make-pot . languages/nora-learn.pot --domain=nora-learn
-#
-# Then create translations, e.g. languages/nora-learn-th.po / .mo.
+#: 404.php:17 404.php:17
+msgid "ไม่พบหน้าที่คุณกำลังค้นหา"
+msgstr ""
+
+#: 404.php:18 404.php:18
+msgid "หน้านี้อาจถูกย้ายหรือไม่มีอยู่แล้ว ลองค้นหาหรือกลับสู่หน้าแรกได้เลย"
+msgstr ""
+
+#: 404.php:23 404.php:23 template-parts/content-none.php:21
+#: template-parts/content-none.php:21
+msgid "กลับหน้าแรก"
+msgstr ""
+
+#: 404.php:24 404.php:24
+msgid "ดูคอร์สเรียน"
+msgstr ""
+
+#: archive.php:14
+msgid "คลังเนื้อหา"
+msgstr ""
+
+#: certpsu/my-certificates.php:23 certpsu/my-certificates.php:23
+msgid "ยังไม่มีใบประกาศนียบัตร"
+msgstr ""
+
+#: certpsu/my-certificates.php:24 certpsu/my-certificates.php:24
+msgid "คุณยังไม่ได้รับใบประกาศนียบัตรใดๆ ในขณะนี้"
+msgstr ""
+
+#: certpsu/my-certificates.php:67 certpsu/my-certificates.php:67
+msgid "ดูใบประกาศนียบัตร"
+msgstr ""
+
+#: comments.php:21
+msgid "ความคิดเห็น %s รายการ"
+msgid_plural "ความคิดเห็น %s รายการ"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40 comments.php:40 inc/template-tags.php:75
+#: inc/template-tags.php:75
+msgid "ก่อนหน้า"
+msgstr ""
+
+#: comments.php:41 comments.php:41 inc/template-tags.php:76
+#: inc/template-tags.php:76
+msgid "ถัดไป"
+msgstr ""
+
+#: comments.php:48 comments.php:48
+msgid "ปิดการแสดงความคิดเห็นแล้ว"
+msgstr ""
+
+#: comments.php:60 comments.php:60
+msgid "ช่องข้อมูลจำเป็นถูกทำเครื่องหมาย *"
+msgstr ""
+
+#: comments.php:63
+msgid ""
+"เข้าสู่ระบบในชื่อ <a href=\"%1$s\" class=\"font-medium text-ink hover:text-"
+"gold\">%2$s</a> <span class=\"mx-1\">&middot;</span> <a href=\"%3$s\" "
+"class=\"text-gold hover:underline\">ออกจากระบบ</a>"
+msgstr ""
+
+#: comments.php:68 comments.php:68
+msgid "ความคิดเห็น"
+msgstr ""
+
+#: comments.php:68 comments.php:68
+msgid "พิมพ์ความคิดเห็นของคุณที่นี่..."
+msgstr ""
+
+#: header.php:21 header.php:21
+msgid "ข้ามไปยังเนื้อหา"
+msgstr ""
+
+#: home.php:15 inc/tutor.php:128
+msgid "ข่าวสารและบทความ"
+msgstr ""
+
+#: home.php:16 inc/setup.php:140 template-parts/footer/columns.php:65
+#: template-parts/footer/columns.php:65 template-parts/home/latest-news.php:31
+msgid "ข่าวสาร"
+msgstr ""
+
+#: home.php:17
+msgid "ติดตามความเคลื่อนไหว กิจกรรม และสาระความรู้จากเรา"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "เนื้อหาหน้าแรก"
+msgstr ""
+
+#: inc/customizer.php:107
+msgid ""
+"เปิด/ปิดแต่ละส่วนของหน้าแรก เพื่อให้หน้ากระชับตามต้องการ (Hero "
+"และคอร์สแนะนำแสดงเสมอ)"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "แสดงแถบสถิติ"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "แสดง \"เริ่มเรียนใน 3 ขั้นตอน\""
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "แสดงผู้สอน"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid "แสดงข่าวสารล่าสุด"
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "แสดงพันธมิตร/คำคม"
+msgstr ""
+
+#: inc/customizer.php:125
+msgid "หน้าเข้าสู่ระบบ (Auth)"
+msgstr ""
+
+#: inc/customizer.php:126
+msgid ""
+"ใส่ shortcode จากปลั๊กอินเพื่อใช้เป็นฟอร์มเข้าสู่ระบบ/สมัครเรียน "
+"ในหน้าที่เลือกเทมเพลต “เข้าสู่ระบบ / สมัครเรียน (Auth)”. "
+"เว้นว่างไว้เพื่อใช้ฟอร์มในตัวของธีม"
+msgstr ""
+
+#: inc/customizer.php:141
+msgid "Auth shortcode"
+msgstr ""
+
+#: inc/customizer.php:142
+msgid "ใส่ shortcode จากปลั๊กอิน เช่น [plugin_login]"
+msgstr ""
+
+#: inc/customizer.php:152 page-templates/template-contact.php:38
+#: page-templates/template-contact.php:38
+msgid "ข้อมูลติดต่อ"
+msgstr ""
+
+#: inc/customizer.php:156 page-templates/template-contact.php:45
+#: page-templates/template-contact.php:45
+msgid "ที่อยู่"
+msgstr ""
+
+#: inc/customizer.php:156
+msgid ""
+"สำนักนวัตกรรมดิจิทัลและระบบอัจฉริยะ มหาวิทยาลัยสงขลานครินทร์ 15 "
+"ถ.กาญจนวณิชย์ ต.หาดใหญ่ อ.หาดใหญ่ จ.สงขลา 90110"
+msgstr ""
+
+#: inc/customizer.php:157 page-templates/template-contact.php:51
+#: page-templates/template-contact.php:51
+msgid "โทรศัพท์"
+msgstr ""
+
+#: inc/customizer.php:158 page-templates/template-auth.php:216
+#: page-templates/template-auth.php:216 page-templates/template-contact.php:57
+#: page-templates/template-contact.php:79
+#: page-templates/template-contact.php:57
+#: page-templates/template-contact.php:79
+msgid "อีเมล"
+msgstr ""
+
+#: inc/customizer.php:159
+msgid "ลิงก์ Google Maps (embed src)"
+msgstr ""
+
+#: inc/customizer.php:165
+msgid "โซเชียลมีเดีย"
+msgstr ""
+
+#: inc/customizer.php:177
+msgid "ส่วนท้าย (Footer)"
+msgstr ""
+
+#: inc/customizer.php:181
+msgid "ข้อความแนะนำองค์กร"
+msgstr ""
+
+#: inc/customizer.php:181 page-templates/template-about.php:19
+msgid ""
+"โครงการอนุรักษ์มรดกทางวัฒนธรรมและภูมิปัญญาไทย "
+"ผ่านนวัตกรรมดิจิทัลเพื่อการเรียนรู้ที่ยั่งยืน"
+msgstr ""
+
+#: inc/customizer.php:182
+msgid "ข้อความลิขสิทธิ์"
+msgstr ""
+
+#: inc/customizer.php:183
+msgid "แถบ CTA ก่อน footer — หัวข้อ"
+msgstr ""
+
+#: inc/customizer.php:183 template-parts/footer/cta.php:10
+msgid "พร้อมเริ่มต้นการเรียนรู้แล้วหรือยัง?"
+msgstr ""
+
+#: inc/customizer.php:184
+msgid "แถบ CTA — ปุ่ม"
+msgstr ""
+
+#: inc/customizer.php:184 page-templates/template-auth.php:190
+#: page-templates/template-auth.php:198 page-templates/template-auth.php:190
+#: page-templates/template-auth.php:198 template-parts/footer/cta.php:11
+msgid "สมัครเรียนฟรี"
+msgstr ""
+
+#: inc/customizer.php:185
+msgid "แถบ CTA — ลิงก์"
+msgstr ""
+
+#: inc/customizer.php:23
+msgid "ตั้งค่า Nora Learn"
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "ส่วนหัวหน้าแรก (Hero)"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "ข้อความนำ"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "มรดกวัฒนธรรมมโนราห์"
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "พาดหัว"
+msgstr ""
+
+#: inc/customizer.php:81 template-parts/home/hero.php:10
+#: page-templates/template-auth.php:67
+msgid "เรียนรู้ มรดกมโนราห์<br>ในยุค ดิจิทัล"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "คำอธิบายใต้พาดหัว"
+msgstr ""
+
+#: inc/customizer.php:82 template-parts/home/hero.php:11
+msgid ""
+"คอร์สเรียนออนไลน์ บทเรียน และคลังความรู้ "
+"เพื่อการเรียนรู้ตลอดชีวิตอย่างเป็นอิสระ"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "ปุ่มหลัก — ข้อความ"
+msgstr ""
+
+#: inc/customizer.php:83 template-parts/home/hero.php:12
+msgid "เริ่มเรียนรู้"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "ปุ่มหลัก — ลิงก์"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "ภาพประกอบ Hero"
+msgstr ""
+
+#: inc/setup.php:137 inc/structured-data.php:80 inc/template-tags.php:34
+#: inc/tutor.php:127
+msgid "หน้าแรก"
+msgstr ""
+
+#: inc/setup.php:138 template-parts/home/featured-courses.php:78
+#: template-parts/home/hero.php:54 template-parts/home/hero.php:54
+#: template-parts/home/stats.php:18
+msgid "คอร์สเรียน"
+msgstr ""
+
+#: inc/setup.php:139 template-parts/footer/columns.php:64
+#: template-parts/footer/columns.php:64 template-parts/home/instructors.php:26
+msgid "ผู้สอน"
+msgstr ""
+
+#: inc/setup.php:56
+msgid "เมนูหลัก (Primary)"
+msgstr ""
+
+#: inc/setup.php:57
+msgid "เมนูส่วนท้าย (Footer)"
+msgstr ""
+
+#: inc/setup.php:58
+msgid "เมนูนโยบาย/กฎหมาย (Footer legal)"
+msgstr ""
+
+#: inc/setup.php:59
+msgid "โซเชียลมีเดีย (Social)"
+msgstr ""
+
+#: inc/setup.php:88
+msgid "การ์ด Nora"
+msgstr ""
+
+#: inc/setup.php:89
+msgid "ภาพปก Nora"
+msgstr ""
+
+#: inc/structured-data.php:130 inc/template-tags.php:53
+#: inc/template-tags.php:53
+msgid "ผลการค้นหา: %s"
+msgstr ""
+
+#: inc/template-tags.php:132
+msgid "อ่าน %d นาที"
+msgid_plural "อ่าน %d นาที"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/template-tags.php:463
+msgid "การสมัครเรียนมีค่าใช้จ่ายหรือไม่?"
+msgstr ""
+
+#: inc/template-tags.php:464
+msgid ""
+"คอร์สส่วนใหญ่บนแพลตฟอร์มเปิดให้เรียนฟรี เพียงสมัครสมาชิกก็เริ่มเรียนได้ทันที"
+" บางคอร์สอาจมีค่าใช้จ่ายซึ่งจะระบุไว้อย่างชัดเจนในหน้าคอร์ส"
+msgstr ""
+
+#: inc/template-tags.php:467
+msgid "ต้องเรียนตามเวลาที่กำหนดไหม?"
+msgstr ""
+
+#: inc/template-tags.php:468
+msgid ""
+"ไม่จำเป็น คุณสามารถเรียนได้ทุกที่ทุกเวลาตามจังหวะของตัวเอง "
+"ระบบจะบันทึกความคืบหน้าให้อัตโนมัติ"
+msgstr ""
+
+#: inc/template-tags.php:471
+msgid "เรียนจบแล้วได้รับเกียรติบัตรหรือไม่?"
+msgstr ""
+
+#: inc/template-tags.php:472
+msgid ""
+"คอร์สที่เปิดให้มีเกียรติบัตร เมื่อคุณเรียนและทำแบบทดสอบครบตามเงื่อนไข "
+"ระบบจะออกเกียรติบัตรให้ดาวน์โหลดได้จากแดชบอร์ด “เกียรติบัตรของฉัน”"
+msgstr ""
+
+#: inc/template-tags.php:475
+msgid "ลืมรหัสผ่านต้องทำอย่างไร?"
+msgstr ""
+
+#: inc/template-tags.php:476
+msgid ""
+"คลิก “เข้าสู่ระบบ” แล้วเลือก “ลืมรหัสผ่าน” กรอกอีเมลที่ใช้สมัคร "
+"ระบบจะส่งลิงก์สำหรับตั้งรหัสผ่านใหม่ให้ทางอีเมล"
+msgstr ""
+
+#: inc/template-tags.php:479
+msgid "ดูประวัติการเรียนได้ที่ไหน?"
+msgstr ""
+
+#: inc/template-tags.php:480
+msgid ""
+"เข้าสู่ระบบแล้วไปที่แดชบอร์ดของฉัน จะเห็นคอร์สที่ลงทะเบียน ความคืบหน้า "
+"และเกียรติบัตรทั้งหมด"
+msgstr ""
+
+#: inc/template-tags.php:57 inc/template-tags.php:57
+msgid "ไม่พบหน้า"
+msgstr ""
+
+#: inc/template-tags.php:62 inc/template-tags.php:62
+msgid "เส้นทางนำทาง"
+msgstr ""
+
+#: inc/template-tags.php:84 inc/template-tags.php:84
+msgid "แบ่งหน้า"
+msgstr ""
+
+#: inc/tutor-gamification.php:119 inc/tutor-gamification.php:159
+#: inc/tutor-gamification.php:119 inc/tutor-gamification.php:159
+msgid "%d Day Streak!"
+msgstr ""
+
+#: inc/tutor-gamification.php:123 inc/tutor-gamification.php:123
+msgid "You're on fire today! Keep learning tomorrow to maintain your streak."
+msgstr ""
+
+#: inc/tutor-gamification.php:125 inc/tutor-gamification.php:125
+msgid "Complete a lesson today to keep your streak alive!"
+msgstr ""
+
+#: inc/tutor-gamification.php:131 inc/tutor-gamification.php:131
+msgid "Longest Streak"
+msgstr ""
+
+#: inc/tutor-gamification.php:162 inc/tutor-gamification.php:162
+msgid "Streak secured today!"
+msgstr ""
+
+#: inc/tutor-gamification.php:162 inc/tutor-gamification.php:162
+msgid "Learn today to keep it!"
+msgstr ""
+
+#: inc/tutor-social.php:152
+msgid "เรียนร่วมกับเพื่อนอีก <strong>%d</strong> คน"
+msgstr ""
+
+#: inc/tutor-social.php:178 inc/tutor-social.php:178
+msgid "รีวิวแนะนำ"
+msgstr ""
+
+#: inc/tutor-social.php:52
+msgid "ผู้เรียนท่านหนึ่ง"
+msgstr ""
+
+#: inc/tutor-social.php:62
+msgid "เพิ่งเรียนจบ"
+msgstr ""
+
+#: inc/tutor-social.php:62
+msgid "เพิ่งลงทะเบียน"
+msgstr ""
+
+#: inc/tutor-social.php:65
+msgid "คุณ %s %s"
+msgstr ""
+
+#: inc/tutor-social.php:67
+msgid "%s ที่ผ่านมา"
+msgstr ""
+
+#: inc/tutor-ux.php:261 inc/tutor-ux.php:261
+#: template-parts/cards/course-card.php:127
+#: template-parts/cards/course-card.php:127
+msgid "ความคืบหน้า"
+msgstr ""
+
+#: inc/tutor-ux.php:312 template-parts/cards/course-card.php:161
+#: template-parts/cards/course-card.php:161
+msgid "เรียนต่อ"
+msgstr ""
+
+#: inc/tutor-ux.php:328 tutor/dashboard/continue-learning.php:60
+#: tutor/dashboard/continue-learning.php:60
+msgid "เรียนต่อ (Continue Learning)"
+msgstr ""
+
+#: inc/tutor-ux.php:89
+msgid "%d ชม. "
+msgstr ""
+
+#: inc/tutor-ux.php:92
+msgid "%d นาที"
+msgstr ""
+
+#: inc/tutor-ux.php:97 inc/tutor-ux.php:97
+msgid "ใช้เวลาเรียนต่อประมาณ %s"
+msgstr ""
+
+#: inc/tutor.php:119 template-parts/footer/columns.php:67
+#: template-parts/footer/columns.php:67
+msgid "เกี่ยวกับเรา"
+msgstr ""
+
+#: inc/tutor.php:120 page-templates/template-faq.php:65
+#: page-templates/template-faq.php:65 page-templates/template-tutorial.php:189
+#: page-templates/template-tutorial.php:189
+#: template-parts/footer/columns.php:68 template-parts/footer/columns.php:77
+#: template-parts/footer/columns.php:68 template-parts/footer/columns.php:77
+msgid "ติดต่อเรา"
+msgstr ""
+
+#: inc/tutor.php:121 page-templates/template-tutorial.php:188
+#: page-templates/template-tutorial.php:188
+#: template-parts/footer/columns.php:66 template-parts/footer/columns.php:66
+msgid "คำถามที่พบบ่อย"
+msgstr ""
+
+#: inc/tutor.php:122
+msgid "ผู้สอนและวิทยากร"
+msgstr ""
+
+#: inc/tutor.php:123
+msgid "สถิติการเรียนรู้"
+msgstr ""
+
+#: inc/tutor.php:124 page-templates/template-auth.php:160
+#: page-templates/template-auth.php:126 page-templates/template-auth.php:140
+#: page-templates/template-auth.php:248 page-templates/template-auth.php:126
+#: page-templates/template-auth.php:140 page-templates/template-auth.php:248
+#: template-parts/header/mobile-menu.php:72
+#: template-parts/header/mobile-menu.php:72
+#: template-parts/header/topbar.php:55 template-parts/header/topbar.php:55
+msgid "เข้าสู่ระบบ"
+msgstr ""
+
+#: inc/tutor.php:125
+msgid "แดชบอร์ดผู้เรียน"
+msgstr ""
+
+#: inc/tutor.php:126
+msgid "วิธีใช้งาน"
+msgstr ""
+
+#: inc/tutor.php:354 inc/tutor.php:354
+msgid "รีวิวจากผู้เรียน"
+msgstr ""
+
+#: inc/tutor.php:357 inc/tutor.php:357
+msgid "ยังไม่มีรีวิว เป็นคนแรกที่รีวิวคอร์สนี้"
+msgstr ""
+
+#: inc/tutor.php:370 inc/tutor.php:370
+msgid "(%d รีวิว)"
+msgstr ""
+
+#: inc/tutor.php:394 inc/tutor.php:394
+msgid "และอีก %d รีวิว"
+msgstr ""
+
+#: inc/tutor.php:50 tutor/dashboard/my-certificates.php:14
+#: tutor/dashboard/my-certificates.php:14
+msgid "เกียรติบัตรของฉัน"
+msgstr ""
+
+#: inc/widgets.php:24
+msgid "แถบข้าง (Blog Sidebar)"
+msgstr ""
+
+#: inc/widgets.php:26
+msgid "แสดงในหน้าบทความ/ข่าว"
+msgstr ""
+
+#: inc/widgets.php:44
+msgid "ส่วนท้าย คอลัมน์ %d"
+msgstr ""
+
+#: inc/widgets.php:46
+msgid "วิดเจ็ตในส่วนท้ายเว็บไซต์"
+msgstr ""
+
+#: page-templates/template-about.php:17
+msgid "รู้จักเรา"
+msgstr ""
+
+#: page-templates/template-about.php:34 page-templates/template-about.php:34
+msgid "ปณิธานของเรา"
+msgstr ""
+
+#: page-templates/template-about.php:35 page-templates/template-about.php:35
+msgid ""
+"AINORA มุ่งมั่นจัดเก็บ ดูแล และเผยแพร่มรดกทางวัฒนธรรมมโนราห์ งานวิจัย "
+"และเอกสารโบราณอันทรงคุณค่า ให้เข้าถึงได้สำหรับทุกคน "
+"ผ่านการเรียนรู้ในรูปแบบดิจิทัลที่เปิดกว้างและเป็นอิสระ"
+msgstr ""
+
+#: page-templates/template-about.php:36 page-templates/template-about.php:36
+msgid ""
+"แพลตฟอร์ม Nora Learn รวบรวมคอร์สเรียน บทเรียน และคลังความรู้ "
+"เพื่อสนับสนุนการเรียนรู้ตลอดชีวิต ทั้งด้านธรรมะ การภาวนา ศิลปะ และวัฒนธรรม"
+msgstr ""
+
+#: page-templates/template-about.php:58
+msgid "คุณค่าที่เรายึดถือ"
+msgstr ""
+
+#: page-templates/template-about.php:59
+msgid "เรียนรู้ด้วยใจที่เป็นอิสระ"
+msgstr ""
+
+#: page-templates/template-about.php:63
+msgid "เปิดกว้างและเป็นอิสระ"
+msgstr ""
+
+#: page-templates/template-about.php:63
+msgid "องค์ความรู้พร้อมให้ทุกคนเข้าถึงได้โดยไม่มีกำแพง"
+msgstr ""
+
+#: page-templates/template-about.php:64
+msgid "เรียนรู้ตลอดชีวิต"
+msgstr ""
+
+#: page-templates/template-about.php:64
+msgid "สนับสนุนการเรียนรู้ในทุกช่วงวัยและทุกจังหวะชีวิต"
+msgstr ""
+
+#: page-templates/template-about.php:65
+msgid "ชุมชนแห่งปัญญา"
+msgstr ""
+
+#: page-templates/template-about.php:65
+msgid "เติบโตไปด้วยกันกับผู้สอนและผู้เรียนที่ใฝ่รู้"
+msgstr ""
+
+#: page-templates/template-auth.php:109 page-templates/template-auth.php:109
+msgid "เข้าสู่ระบบแล้ว สวัสดี %s"
+msgstr ""
+
+#: page-templates/template-auth.php:110 page-templates/template-auth.php:110
+msgid "พร้อมเรียนรู้ต่อหรือยัง?"
+msgstr ""
+
+#: page-templates/template-auth.php:112 page-templates/template-auth.php:112
+msgid "ไปที่แดชบอร์ดของฉัน"
+msgstr ""
+
+#: page-templates/template-auth.php:113 page-templates/template-auth.php:113
+msgid "ออกจากระบบ"
+msgstr ""
+
+#: page-templates/template-auth.php:132 page-templates/template-auth.php:220
+#: page-templates/template-auth.php:132 page-templates/template-auth.php:220
+msgid "สมัครเรียน"
+msgstr ""
+
+#: page-templates/template-auth.php:141 page-templates/template-auth.php:141
+msgid "เข้าสู่ระบบเพื่อเรียนต่อและจัดการคอร์สของคุณ"
+msgstr ""
+
+#: page-templates/template-auth.php:157
+msgid "ชื่อผู้ใช้ หรืออีเมล"
+msgstr ""
+
+#: page-templates/template-auth.php:158
+msgid "รหัสผ่าน"
+msgstr ""
+
+#: page-templates/template-auth.php:159
+msgid "จดจำฉัน"
+msgstr ""
+
+#: page-templates/template-auth.php:164 page-templates/template-auth.php:164
+msgid "ลืมรหัสผ่าน?"
+msgstr ""
+
+#: page-templates/template-auth.php:172 page-templates/template-auth.php:231
+#: page-templates/template-auth.php:172 page-templates/template-auth.php:231
+msgid "หรือ"
+msgstr ""
+
+#: page-templates/template-auth.php:189 page-templates/template-auth.php:189
+msgid "ยังไม่มีบัญชี?"
+msgstr ""
+
+#: page-templates/template-auth.php:199 page-templates/template-auth.php:199
+msgid "สร้างบัญชีเพื่อเข้าถึงคอร์สและบทเรียนทั้งหมด"
+msgstr ""
+
+#: page-templates/template-auth.php:212 page-templates/template-auth.php:212
+msgid "ชื่อผู้ใช้"
+msgstr ""
+
+#: page-templates/template-auth.php:219 page-templates/template-auth.php:219
+msgid "ระบบจะส่งลิงก์ตั้งรหัสผ่านไปยังอีเมลของคุณ"
+msgstr ""
+
+#: page-templates/template-auth.php:247 page-templates/template-auth.php:247
+msgid "มีบัญชีอยู่แล้ว?"
+msgstr ""
+
+#: page-templates/template-auth.php:73
+msgid "คอร์สเรียนออนไลน์ฟรี เปิดให้ทุกคน"
+msgstr ""
+
+#: page-templates/template-auth.php:74
+msgid "เรียนได้ทุกที่ทุกเวลา ตามจังหวะของคุณ"
+msgstr ""
+
+#: page-templates/template-auth.php:75
+msgid "ทำบทเรียนครบ รับเกียรติบัตรยืนยันการเรียนรู้"
+msgstr ""
+
+#: page-templates/template-contact.php:26
+msgid "ติดต่อ"
+msgstr ""
+
+#: page-templates/template-contact.php:28
+msgid "มีคำถามเกี่ยวกับคอร์สเรียนหรือการใช้งาน? ส่งข้อความถึงเราได้เลย"
+msgstr ""
+
+#: page-templates/template-contact.php:39
+#: page-templates/template-contact.php:39
+msgid "ทีมงานยินดีให้ความช่วยเหลือในวันและเวลาทำการ"
+msgstr ""
+
+#: page-templates/template-contact.php:78
+#: page-templates/template-contact.php:78
+msgid "ชื่อ-นามสกุล"
+msgstr ""
+
+#: page-templates/template-contact.php:81
+#: page-templates/template-contact.php:81
+msgid "หัวข้อ"
+msgstr ""
+
+#: page-templates/template-contact.php:82
+#: page-templates/template-contact.php:82
+msgid "ข้อความ"
+msgstr ""
+
+#: page-templates/template-contact.php:83
+#: page-templates/template-contact.php:83
+msgid "ส่งข้อความ"
+msgstr ""
+
+#: page-templates/template-contact.php:84
+#: page-templates/template-contact.php:84
+msgid ""
+"เคล็ดลับ: ติดตั้งปลั๊กอินฟอร์ม เช่น Contact Form 7 "
+"แล้ววางช็อตโค้ดในหน้านี้เพื่อใช้งานฟอร์มเต็มรูปแบบ"
+msgstr ""
+
+#: page-templates/template-contact.php:97
+#: page-templates/template-contact.php:97
+msgid "แผนที่"
+msgstr ""
+
+#: page-templates/template-dashboard.php:27
+msgid "พื้นที่การเรียนรู้"
+msgstr ""
+
+#: page-templates/template-dashboard.php:29
+msgid "จัดการการเรียนรู้ ติดตามความคืบหน้า และดูเกียรติบัตรของคุณ"
+msgstr ""
+
+#: page-templates/template-faq.php:22 page-templates/template-tutorial.php:64
+#: page-templates/template-tutorial.php:64
+msgid "ศูนย์ช่วยเหลือ"
+msgstr ""
+
+#: page-templates/template-faq.php:24
+msgid "รวมคำถามที่พบบ่อยเกี่ยวกับการเรียนและการใช้งานแพลตฟอร์ม"
+msgstr ""
+
+#: page-templates/template-faq.php:63 page-templates/template-faq.php:63
+msgid "ยังไม่พบคำตอบที่ต้องการ?"
+msgstr ""
+
+#: page-templates/template-faq.php:64 page-templates/template-faq.php:64
+msgid "ติดต่อทีมงานของเราได้โดยตรง"
+msgstr ""
+
+#: page-templates/template-instructors.php:18
+msgid "ทีมผู้สอน"
+msgstr ""
+
+#: page-templates/template-instructors.php:20
+msgid "พบกับผู้สอนและวิทยากรผู้เชี่ยวชาญที่พร้อมถ่ายทอดความรู้และประสบการณ์"
+msgstr ""
+
+#: page-templates/template-instructors.php:58
+#: page-templates/template-instructors.php:58
+msgid "ต้องเปิดใช้งานปลั๊กอิน Tutor LMS เพื่อแสดงรายชื่อผู้สอน"
+msgstr ""
+
+#: page-templates/template-statistics.php:23
+msgid "ภาพรวม"
+msgstr ""
+
+#: page-templates/template-statistics.php:25
+msgid "ตัวเลขการเรียนรู้บนแพลตฟอร์ม อัปเดตอัตโนมัติจากระบบ"
+msgstr ""
+
+#: page-templates/template-statistics.php:31
+#: template-parts/courses/catalog-header.php:22
+#: template-parts/footer/columns.php:63 template-parts/footer/columns.php:63
+msgid "คอร์สเรียนทั้งหมด"
+msgstr ""
+
+#: page-templates/template-statistics.php:32 template-parts/home/stats.php:36
+msgid "บทเรียน"
+msgstr ""
+
+#: page-templates/template-statistics.php:33
+#: page-templates/template-statistics.php:91
+#: page-templates/template-statistics.php:91 template-parts/home/hero.php:58
+#: template-parts/home/hero.php:58 template-parts/home/stats.php:24
+msgid "ผู้เรียน"
+msgstr ""
+
+#: page-templates/template-statistics.php:34 template-parts/home/stats.php:30
+msgid "ผู้สอน/วิทยากร"
+msgstr ""
+
+#: page-templates/template-statistics.php:84
+#: page-templates/template-statistics.php:84
+msgid "คอร์สยอดนิยม"
+msgstr ""
+
+#: page-templates/template-statistics.php:90
+#: page-templates/template-statistics.php:90
+msgid "คอร์ส"
+msgstr ""
+
+#: page-templates/template-tutorial.php:107
+msgid "วิดีโอสอนใช้งาน"
+msgstr ""
+
+#: page-templates/template-tutorial.php:108
+msgid "ดูแล้วทำตามได้ทันที"
+msgstr ""
+
+#: page-templates/template-tutorial.php:127
+msgid "เล่นวิดีโอ: %s"
+msgstr ""
+
+#: page-templates/template-tutorial.php:184
+#: page-templates/template-tutorial.php:184
+msgid "ยังต้องการความช่วยเหลือ?"
+msgstr ""
+
+#: page-templates/template-tutorial.php:185
+#: page-templates/template-tutorial.php:185
+msgid "ดูคำถามที่พบบ่อย หรือติดต่อทีมงานของเราได้เลย"
+msgstr ""
+
+#: page-templates/template-tutorial.php:32 template-parts/header/topbar.php:56
+#: template-parts/header/topbar.php:56 template-parts/home/how-it-works.php:13
+msgid "สมัครสมาชิก"
+msgstr ""
+
+#: page-templates/template-tutorial.php:33
+msgid "สร้างบัญชีฟรีด้วยอีเมล เพื่อเข้าถึงคอร์สและบทเรียนทั้งหมด"
+msgstr ""
+
+#: page-templates/template-tutorial.php:38
+#: template-parts/courses/catalog-header.php:55
+#: template-parts/courses/catalog-header.php:55
+#: template-parts/home/hero.php:35 template-parts/home/hero.php:35
+msgid "ค้นหาคอร์ส"
+msgstr ""
+
+#: page-templates/template-tutorial.php:39
+msgid "เลือกหมวดหมู่หรือค้นหาคอร์สที่สนใจจากคลังคอร์สทั้งหมด"
+msgstr ""
+
+#: page-templates/template-tutorial.php:44 template-parts/header/navbar.php:63
+#: template-parts/header/navbar.php:63
+msgid "เริ่มเรียน"
+msgstr ""
+
+#: page-templates/template-tutorial.php:45
+msgid "เรียนบทเรียนและทำแบบทดสอบได้ทุกที่ทุกเวลา ตามจังหวะของคุณ"
+msgstr ""
+
+#: page-templates/template-tutorial.php:50
+msgid "รับเกียรติบัตร"
+msgstr ""
+
+#: page-templates/template-tutorial.php:51
+#: template-parts/home/how-it-works.php:24
+msgid "ทำบทเรียนและแบบทดสอบให้ครบ รับเกียรติบัตรเพื่อยืนยันการเรียนรู้"
+msgstr ""
+
+#: page-templates/template-tutorial.php:66
+msgid "วิธีใช้งานแพลตฟอร์ม"
+msgstr ""
+
+#: page-templates/template-tutorial.php:69
+#: page-templates/template-tutorial.php:69
+msgid "เริ่มต้นเรียนรู้ได้ง่ายๆ ทำตามขั้นตอนและวิดีโอแนะนำด้านล่าง"
+msgstr ""
+
+#: page-templates/template-tutorial.php:80
+#: template-parts/home/how-it-works.php:33
+msgid "เริ่มต้นง่ายๆ"
+msgstr ""
+
+#: page-templates/template-tutorial.php:81
+msgid "เริ่มเรียนใน 4 ขั้นตอน"
+msgstr ""
+
+#: page-templates/template-tutorial.php:90
+#: page-templates/template-tutorial.php:90
+msgid "ขั้นที่ %d"
+msgstr ""
+
+#: page.php:38 page.php:38 single.php:60 single.php:60
+msgid "หน้า:"
+msgstr ""
+
+#: search.php:17 searchform.php:13 searchform.php:23 searchform.php:13
+#: searchform.php:23 template-parts/courses/catalog-header.php:59
+#: template-parts/courses/catalog-header.php:59
+#: template-parts/header/navbar.php:57 template-parts/header/navbar.php:96
+#: template-parts/header/navbar.php:96 template-parts/header/navbar.php:57
+#: template-parts/home/hero.php:39 template-parts/home/hero.php:39
+msgid "ค้นหา"
+msgstr ""
+
+#: search.php:19
+msgid "ผลการค้นหา “%s”"
+msgstr ""
+
+#: search.php:21
+msgid "พบ %d รายการ"
+msgid_plural "พบ %d รายการ"
+msgstr[0] ""
+msgstr[1] ""
+
+#: searchform.php:19 searchform.php:19
+msgid "ค้นหา…"
+msgstr ""
+
+#: sidebar.php:14 sidebar.php:14
+msgid "แถบข้าง"
+msgstr ""
+
+#: single.php:109
+msgid "อ่านเพิ่มเติม"
+msgstr ""
+
+#: single.php:109
+msgid "บทความที่เกี่ยวข้อง"
+msgstr ""
+
+#: single.php:69 single.php:69
+msgid "แท็ก:"
+msgstr ""
+
+#: single.php:83 single.php:83
+msgid "เขียนโดย"
+msgstr ""
+
+#: style.css (header: Author)
+msgid ""
+"Digital Innovation and Intelligent Systems / Prince of Songkla University"
+msgstr ""
+
+#: style.css (header: Description)
+msgid ""
+"ธีมแพลตฟอร์มเรียนรู้มรดกวัฒนธรรมมโนราห์ ออกแบบให้สอดคล้องกับ "
+"ainora.psu.ac.th (ฟอนต์ Noto Sans Thai, โทนทองมรดก #D4AF37 "
+"บนพื้นขาว–เทาอ่อน) รองรับ Tutor LMS เต็มรูปแบบ พัฒนาด้วย TailwindCSS. A "
+"Manorah cultural-heritage learning-platform theme, design-aligned with "
+"ainora.psu.ac.th, with full Tutor LMS integration, built with TailwindCSS."
+msgstr ""
+
+#: style.css (header: Theme Name)
+msgid "AINora"
+msgstr ""
+
+#: style.css (header: Theme URI) style.css (header: Author URI)
+msgid "https://ainora.psu.ac.th"
+msgstr ""
+
+#: template-parts/cards/course-card.php:103
+#: template-parts/cards/course-card.php:103
+msgid "%d บทเรียน"
+msgstr ""
+
+#: template-parts/cards/course-card.php:171
+#: template-parts/cards/course-card.php:171
+msgid "%s ผู้เรียน"
+msgstr ""
+
+#: template-parts/cards/course-card.php:66
+msgid "ระดับต้น"
+msgstr ""
+
+#: template-parts/cards/course-card.php:67
+msgid "ระดับกลาง"
+msgstr ""
+
+#: template-parts/cards/course-card.php:68
+msgid "ระดับสูง"
+msgstr ""
+
+#: template-parts/cards/course-card.php:69
+msgid "ทุกระดับ"
+msgstr ""
+
+#: template-parts/cards/course-card.php:92
+#: template-parts/cards/course-card.php:92
+msgid "เรียนฟรี"
+msgstr ""
+
+#: template-parts/cards/course-card.php:92
+msgid "มีค่าใช้จ่าย"
+msgstr ""
+
+#: template-parts/cards/instructor-card.php:37
+#: template-parts/cards/instructor-card.php:37
+msgid "%d คอร์ส"
+msgstr ""
+
+#: template-parts/cards/post-card.php:48 template-parts/cards/post-card.php:48
+msgid "อ่านต่อ"
+msgstr ""
+
+#: template-parts/content-none.php:14 template-parts/content-none.php:14
+msgid "ไม่พบเนื้อหา"
+msgstr ""
+
+#: template-parts/content-none.php:17 template-parts/content-none.php:17
+msgid "ไม่พบผลลัพธ์ที่ตรงกับคำค้นหา ลองใช้คำอื่นดูอีกครั้ง"
+msgstr ""
+
+#: template-parts/content-none.php:20 template-parts/content-none.php:20
+msgid "ยังไม่มีเนื้อหาในส่วนนี้ โปรดกลับมาใหม่อีกครั้ง"
+msgstr ""
+
+#: template-parts/courses/catalog-header.php:25
+msgid "เลือกเรียนได้จาก %s คอร์ส ตามจังหวะของคุณ"
+msgstr ""
+
+#: template-parts/courses/catalog-header.php:41
+#: template-parts/courses/catalog-header.php:41
+msgid "คลังคอร์ส"
+msgstr ""
+
+#: template-parts/courses/catalog-header.php:57
+#: template-parts/courses/catalog-header.php:57
+msgid "ค้นหาคอร์ส…"
+msgstr ""
+
+#: template-parts/courses/catalog-header.php:64
+#: template-parts/courses/catalog-header.php:64
+msgid "หมวดหมู่คอร์ส"
+msgstr ""
+
+#: template-parts/courses/catalog-header.php:67
+#: template-parts/courses/catalog-header.php:67
+msgid "ทั้งหมด"
+msgstr ""
+
+#: template-parts/footer/bottom.php:13
+msgid "© %1$s %2$s สงวนลิขสิทธิ์"
+msgstr ""
+
+#: template-parts/footer/bottom.php:22 template-parts/footer/bottom.php:22
+msgid "แพลตฟอร์มการเรียนรู้มรดกวัฒนธรรมมโนราห์"
+msgstr ""
+
+#: template-parts/footer/bottom.php:23 template-parts/footer/bottom.php:23
+msgid "มหาวิทยาลัยสงขลานครินทร์"
+msgstr ""
+
+#: template-parts/footer/bottom.php:24 template-parts/footer/bottom.php:24
+msgid "ร่วมกับ"
+msgstr ""
+
+#: template-parts/footer/bottom.php:25 template-parts/footer/bottom.php:25
+msgid "สำนักนวัตกรรมดิจิทัลและระบบอัจฉริยะ"
+msgstr ""
+
+#: template-parts/footer/bottom.php:28 template-parts/footer/bottom.php:28
+msgid "อีเมล:"
+msgstr ""
+
+#: template-parts/footer/bottom.php:31 template-parts/footer/bottom.php:31
+msgid "โทร:"
+msgstr ""
+
+#: template-parts/footer/bottom.php:52 template-parts/footer/bottom.php:52
+msgid "พัฒนาเพื่อการเรียนรู้และอนุรักษ์มรดกวัฒนธรรม"
+msgstr ""
+
+#: template-parts/footer/columns.php:61 template-parts/footer/columns.php:61
+msgid "ลิงก์ด่วน"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:37
+#: template-parts/header/mobile-menu.php:37
+#: template-parts/header/navbar.php:32 template-parts/header/navbar.php:32
+msgid "เมนูหลัก"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:41
+#: template-parts/header/mobile-menu.php:41
+msgid "ปิดเมนู"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:46
+#: template-parts/header/mobile-menu.php:46
+msgid "เมนูบนมือถือ"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:68
+#: template-parts/header/mobile-menu.php:68
+#: template-parts/header/topbar.php:52 template-parts/header/topbar.php:52
+msgid "แดชบอร์ดของฉัน"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:73
+#: template-parts/header/mobile-menu.php:73
+msgid "สมัคร"
+msgstr ""
+
+#: template-parts/header/navbar.php:25
+msgid "แพลตฟอร์มการเรียนรู้"
+msgstr ""
+
+#: template-parts/header/navbar.php:73 template-parts/header/navbar.php:73
+msgid "เปิด/ปิดเมนู"
+msgstr ""
+
+#: template-parts/header/navbar.php:95 template-parts/header/navbar.php:95
+msgid "ค้นหาคอร์ส บทเรียน หรือบทความ…"
+msgstr ""
+
+#: template-parts/header/navbar.php:97 template-parts/header/navbar.php:97
+msgid "ปิด"
+msgstr ""
+
+#: template-parts/home/categories.php:41
+msgid "หมวดหมู่"
+msgstr ""
+
+#: template-parts/home/categories.php:42
+msgid "เรียนรู้ตามหัวข้อที่สนใจ"
+msgstr ""
+
+#: template-parts/home/categories.php:43
+msgid ""
+"สำรวจหมวดหมู่การเรียนรู้ที่หลากหลาย ตั้งแต่ธรรมะ การภาวนา "
+"ไปจนถึงศิลปะและวัฒนธรรม"
+msgstr ""
+
+#: template-parts/home/categories.php:57
+msgid "%d คอร์ส"
+msgid_plural "%d คอร์ส"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/home/featured-courses.php:79
+msgid "คอร์สแนะนำสำหรับคุณ"
+msgstr ""
+
+#: template-parts/home/featured-courses.php:80
+msgid "เลือกเรียนตามความสนใจ เริ่มต้นได้ทันทีและเรียนรู้ในจังหวะของคุณเอง"
+msgstr ""
+
+#: template-parts/home/featured-courses.php:86
+#: template-parts/home/featured-courses.php:86
+msgid "ดูคอร์สทั้งหมด"
+msgstr ""
+
+#: template-parts/home/hero.php:37 template-parts/home/hero.php:37
+msgid "ค้นหาคอร์ส หัวข้อ หรือผู้สอน…"
+msgstr ""
+
+#: template-parts/home/hero.php:61 template-parts/home/hero.php:61
+msgid "FREE"
+msgstr ""
+
+#: template-parts/home/hero.php:62 template-parts/home/hero.php:62
+msgid "เข้าถึงได้ฟรี"
+msgstr ""
+
+#: template-parts/home/how-it-works.php:14
+msgid "สร้างบัญชีฟรีเพียงไม่กี่ขั้นตอน เพื่อเข้าถึงคอร์สและบทเรียนทั้งหมด"
+msgstr ""
+
+#: template-parts/home/how-it-works.php:18
+msgid "เลือกคอร์สเรียน"
+msgstr ""
+
+#: template-parts/home/how-it-works.php:19
+msgid "ค้นหาและลงทะเบียนคอร์สที่สนใจ เรียนได้ทุกที่ทุกเวลาตามจังหวะของคุณ"
+msgstr ""
+
+#: template-parts/home/how-it-works.php:23
+msgid "เรียนจบรับเกียรติบัตร"
+msgstr ""
+
+#: template-parts/home/how-it-works.php:34
+msgid "เริ่มเรียนใน 3 ขั้นตอน"
+msgstr ""
+
+#: template-parts/home/instructors.php:27
+msgid "เรียนกับผู้สอนและวิทยากร"
+msgstr ""
+
+#: template-parts/home/instructors.php:28
+msgid "ผู้เชี่ยวชาญและครูบาอาจารย์ที่พร้อมถ่ายทอดความรู้และประสบการณ์"
+msgstr ""
+
+#: template-parts/home/instructors.php:34
+#: template-parts/home/instructors.php:34
+msgid "ดูทั้งหมด"
+msgstr ""
+
+#: template-parts/home/latest-news.php:32
+msgid "ข่าวสารและกิจกรรมล่าสุด"
+msgstr ""
+
+#: template-parts/home/latest-news.php:38
+#: template-parts/home/latest-news.php:38
+msgid "อ่านข่าวทั้งหมด"
+msgstr ""
+
+#: template-parts/home/partners.php:22 template-parts/home/partners.php:22
+msgid "ภายใต้ความร่วมมือกับ"
+msgstr ""
+
+#: template-parts/home/partners.php:34 template-parts/home/partners.php:34
+msgid "“มโนราห์ คือลมหายใจแห่งแผ่นดินใต้ มรดกที่มีชีวิตจากรุ่นสู่รุ่น”"
+msgstr ""
+
+#: template-parts/home/partners.php:37 template-parts/home/partners.php:37
+msgid "— มรดกวัฒนธรรมมโนราห์"
+msgstr ""
+
+#: tutor/dashboard/continue-learning.php:108
+#: tutor/dashboard/continue-learning.php:108
+msgid "คุณยังไม่ได้ลงทะเบียนเรียนคอร์สใดเลย"
+msgstr ""
+
+#: tutor/dashboard/continue-learning.php:110
+#: tutor/dashboard/continue-learning.php:110
+msgid "สำรวจคอร์สเรียน"
+msgstr ""
+
+#: tutor/dashboard/continue-learning.php:96
+#: tutor/dashboard/continue-learning.php:96
+msgid "เริ่มเรียนต่อเลย"
+msgstr ""
+
+#: tutor/dashboard/enrolled-courses.php:19
+#: tutor/dashboard/enrolled-courses.php:19
+msgid "คอร์สเรียนของฉัน"
+msgstr ""
+
+#: tutor/dashboard/enrolled-courses.php:38
+#: tutor/dashboard/enrolled-courses.php:38
+msgid "พร้อมจะเริ่มเรียนรู้หรือยัง?"
+msgstr ""
+
+#: tutor/dashboard/enrolled-courses.php:40
+#: tutor/dashboard/enrolled-courses.php:40
+msgid ""
+"ดูเหมือนว่าคุณจะยังไม่ได้ลงทะเบียนเรียนคอร์สใดเลยบนแพลตฟอร์มของเรา "
+"ลองสำรวจคอร์สเรียนฟรีและน่าสนใจมากมายที่เราเตรียมไว้ให้คุณสิ!"
+msgstr ""
+
+#: tutor/dashboard/enrolled-courses.php:43
+#: tutor/dashboard/enrolled-courses.php:43
+msgid "เริ่มค้นหาคอร์สที่ใช่สำหรับคุณ"
+msgstr ""
+
+#: tutor/dashboard/my-certificates.php:17
+#: tutor/dashboard/my-certificates.php:17
+msgid "รายการเกียรติบัตรทั้งหมดที่คุณได้รับ"
+msgstr ""
+
+#: tutor/dashboard/my-certificates.php:30
+#: tutor/dashboard/my-certificates.php:30
+msgid "แชร์โปรไฟล์:"
+msgstr ""
+
+#: tutor/dashboard/registration.php:15 tutor/dashboard/registration.php:15
+msgid "เข้าสู่ระบบเพื่อเรียนรู้"
+msgstr ""
+
+#: tutor/dashboard/registration.php:18 tutor/dashboard/registration.php:18
+msgid ""
+"ระบบสงวนสิทธิ์สำหรับผู้ใช้งานที่ยืนยันตัวตนผ่าน Single Sign-On (SSO) "
+"แล้วเท่านั้น ไม่สามารถสมัครสมาชิกด้วยอีเมลปกติได้"
+msgstr ""
+
+#: tutor/dashboard/registration.php:21 tutor/dashboard/registration.php:21
+msgid "เข้าสู่ระบบด้วยบัญชีกลาง (SSO)"
+msgstr ""
+
+#: tutor/single/course/course-topics.php:21
+#: tutor/single/course/course-topics.php:21
+msgid "เนื้อหาคอร์สเรียน"
+msgstr ""
+
+#: tutor/single/course/course-topics.php:41
+#: tutor/single/course/course-topics.php:41
+msgid "เรียนจบแล้ว %1$s/%2$s บท"
+msgstr ""
+
+#: tutor/single/course/course-topics.php:57
+msgid "สำเร็จ"
+msgstr ""
+
+#: tutor/single/course/course-topics.php:57
+msgid "รอเรียน"
+msgstr ""
+
+#: tutor/single/course/tags.php:14 tutor/single/course/tags.php:14
+msgid "แท็ก"
+msgstr ""

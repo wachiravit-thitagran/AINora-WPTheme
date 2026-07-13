@@ -7,6 +7,31 @@ on:
     branches: [ "main" ]
 
 jobs:
+  unit:
+    name: "PHPUnit (PHP ${{ matrix.php-version }})"
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: ['8.0', '8.1', '8.2', '8.3', '8.4']
+      fail-fast: false
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-version }}
+        extensions: mbstring, dom, xml
+        coverage: none
+        tools: composer
+
+    - name: Install Composer Dependencies
+      run: composer install --prefer-dist --no-progress --no-interaction --ignore-platform-req=php+
+
+    - name: Run PHPUnit
+      run: vendor/bin/phpunit --testdox
+
   integration:
     name: "WP Integration (PHP ${{ matrix.php-version }})"
     runs-on: ubuntu-latest

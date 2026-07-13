@@ -64,7 +64,7 @@ while ( have_posts() ) :
 					<img src="<?php echo esc_url( NORA_LEARN_URI . '/assets/images/brand-logo.png' ); ?>" alt="<?php echo esc_attr( 'AINORA × PSU — ' . get_bloginfo( 'name' ) ); ?>" width="642" height="160" class="h-10 w-auto" />
 				</span>
 				<h1 class="dashboard-hero__title mt-8 max-w-sm leading-snug">
-					<?php echo wp_kses_post( __( 'เรียนรู้ พุทธธรรม<br>ในยุค ดิจิทัล', 'nora-learn' ) ); ?>
+					<?php echo wp_kses_post( __( 'เรียนรู้ มรดกมโนราห์<br>ในยุค ดิจิทัล', 'nora-learn' ) ); ?>
 				</h1>
 			</div>
 			<ul class="mt-10 space-y-3 text-sm text-white/90">
