@@ -27,7 +27,9 @@ jobs:
         tools: composer
 
     - name: Install Composer Dependencies
-      run: composer install --prefer-dist --no-progress --no-interaction --ignore-platform-req=php+
+      # The committed lock file targets the maintainer's PHP version; dev-only
+      # deps (phpunit/brain-monkey) are resolved fresh per matrix PHP instead.
+      run: composer update --prefer-dist --no-progress --no-interaction
 
     - name: Run PHPUnit
       run: vendor/bin/phpunit --testdox
