@@ -18,7 +18,7 @@ $courses_url = nora_learn_courses_url();
 		<?php else : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex items-center gap-3" rel="home">
 				<span class="inline-flex items-center rounded-lg bg-white px-2 py-1 shadow-soft">
-					<img src="<?php echo esc_url( NORA_LEARN_URI . '/assets/images/brand-logo.png' ); ?>" alt="<?php echo esc_attr( 'AINORA × PSU — ' . get_bloginfo( 'name' ) ); ?>" width="642" height="160" class="h-10 w-auto" loading="eager" />
+					<img src="<?php echo esc_url( has_site_icon() ? get_site_icon_url( 150 ) : NORA_LEARN_URI . '/assets/images/brand-mark.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="h-10 w-auto" loading="eager" />
 				</span>
 				<span class="leading-tight">
 					<span class="nora-site-title block font-serif text-lg font-bold uppercase tracking-[0.14em] text-ink"><?php bloginfo( 'name' ); ?></span>
