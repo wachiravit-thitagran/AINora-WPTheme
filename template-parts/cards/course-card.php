@@ -133,8 +133,11 @@ $level_labels = array(
 			<div class="mt-auto border-t border-paper-100 pt-4">
 				<?php 
 				if ( class_exists( 'Nora_Learn_Tutor_UX' ) ) {
-					Nora_Learn_Tutor_UX::render_segmented_progress_bar( $course_id, get_current_user_id() );
+					if ( $progress > 0 ) {
+						Nora_Learn_Tutor_UX::render_segmented_progress_bar( $course_id, get_current_user_id() );
+					}
 				} else {
+					if ( $progress > 0 ) {
 				?>
 				<div class="flex items-center justify-between text-xs text-ink-light mb-1.5">
 					<span><?php esc_html_e( 'ความคืบหน้า', 'nora-learn' ); ?></span>
@@ -143,7 +146,10 @@ $level_labels = array(
 				<div class="h-1.5 w-full overflow-hidden rounded-full bg-paper-100 mb-4">
 					<span class="block h-full rounded-full bg-gold transition-all duration-500" style="width:<?php echo (int) $progress; ?>%"></span>
 				</div>
-				<?php } ?>
+				<?php 
+					}
+				} 
+				?>
 				<?php
 				$continue_url = get_permalink( $course_id );
 				if ( class_exists( 'Nora_Learn_Tutor_UX' ) ) {
@@ -151,7 +157,7 @@ $level_labels = array(
 				}
 				?>
 				<a href="<?php echo esc_url( $continue_url ); ?>" class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-gold hover:text-gold-dark">
-					<?php esc_html_e( 'เรียนต่อ', 'nora-learn' ); ?>
+					<?php echo ( $progress > 0 ) ? esc_html__( 'เรียนต่อ', 'nora-learn' ) : esc_html__( 'เริ่มเรียน', 'nora-learn' ); ?>
 					<?php echo nora_learn_icon( 'arrow', 'h-4 w-4 transition group-hover:translate-x-1' ); // phpcs:ignore ?>
 				</a>
 			</div>
