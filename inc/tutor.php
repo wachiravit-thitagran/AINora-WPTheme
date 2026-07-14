@@ -48,7 +48,7 @@ add_action( 'after_setup_theme', 'nora_learn_tutor_setup', 11 );
 function nora_learn_add_certificates_dashboard_tab( $nav_items ) {
 	$nav_items['my-certificates'] = array(
 		'title' => __( 'เกียรติบัตรของฉัน', 'nora-learn' ),
-		'icon'  => 'tutor-icon-mortarboard',
+		'icon'  => 'certificate',
 	);
 	return $nav_items;
 }

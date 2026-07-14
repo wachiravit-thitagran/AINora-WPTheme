@@ -458,7 +458,7 @@ msgstr ""
 
 #: inc/tutor-ux.php:328 tutor/dashboard/continue-learning.php:60
 #: tutor/dashboard/continue-learning.php:60
-msgid "เรียนต่อ (Continue Learning)"
+msgid "เรียนต่อจากที่ค้างไว้"
 msgstr ""
 
 #: inc/tutor-ux.php:89

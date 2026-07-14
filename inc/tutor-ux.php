@@ -331,8 +331,8 @@ class Nora_Learn_Tutor_UX {
 			$new_tabs[$key] = $tab;
 			if ( $key === 'dashboard' || $key === 'index' ) {
 				$new_tabs['continue-learning'] = array(
-					'title' => __( 'เรียนต่อ (Continue Learning)', 'nora-learn' ),
-					'icon'  => 'tutor-icon-clock-line',
+					'title' => __( 'เรียนต่อจากที่ค้างไว้', 'nora-learn' ),
+					'icon'  => 'play-line',
 				);
 			}
 		}
