@@ -1,6 +1,8 @@
 # Dependencies
 node_modules/
-vendor/
+# Only ignore the Composer vendor/ at the repo root — NOT the self-hosted
+# libraries in assets/js/vendor/ (canvas-confetti ships with the theme).
+/vendor/
 
 # Build / packaging output
 dist/

@@ -115,7 +115,8 @@ $level_labels = array(
 			<?php 
 			$nora_excerpt = get_post_field( 'post_excerpt', get_the_ID() );
 			if ( empty( $nora_excerpt ) ) {
-				$nora_excerpt = wp_strip_all_tags( get_post_field( 'post_content', get_the_ID() ) );
+				// Fallback used to dump the entire post content into the card.
+				$nora_excerpt = wp_trim_words( wp_strip_all_tags( get_post_field( 'post_content', get_the_ID() ) ), 28, '…' );
 			}
 			echo esc_html( $nora_excerpt );
 			?>
@@ -134,7 +135,9 @@ $level_labels = array(
 				<?php 
 				if ( class_exists( 'Nora_Learn_Tutor_UX' ) ) {
 					if ( $progress > 0 ) {
-						Nora_Learn_Tutor_UX::render_segmented_progress_bar( $course_id, get_current_user_id() );
+						// Pass the already-computed percent — avoids re-running
+					// get_course_completed_percent() for every card.
+					Nora_Learn_Tutor_UX::render_segmented_progress_bar( $course_id, get_current_user_id(), $progress );
 					}
 				} else {
 					if ( $progress > 0 ) {
